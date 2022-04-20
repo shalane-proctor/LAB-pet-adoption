@@ -1,3 +1,10 @@
 body {
   background-color: antiquewhite;
 }
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+.card {
+  margin: 5px;
+}
