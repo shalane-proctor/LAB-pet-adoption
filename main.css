@@ -8,3 +8,6 @@ body {
 .card {
   margin: 5px;
 }
+.buttoncontainer {
+  text-align: center;
+}
