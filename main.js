@@ -246,6 +246,22 @@ pets.forEach((item, index) => {
 });
 
 const source = document.querySelector("#source");
+source.innerHTML = `<div id="main">
+<div class="buttoncontainer">
+  <button id="cat-btn">Cats</button>
+  <button id="dog-btn">Dogs</button>
+  <button id="dinos-btn">Dinos</button>
+  <button id="all-btn">All</button>
+</div>
+<div id="pets-div" class="card-container"></div>
+</div>`;
+
+const catBtn = document.querySelector("#cat-btn");
+const dogBtn = document.querySelector("#dog-btn");
+const dinoBtn = document.querySelector("#dino-btn");
+const allBtn = document.querySelector("#all-btn");
+const petsDiv = document.querySelector("#pets-div");
+
 let domString = "";
 for (const pet of pets) {
   domString += `<div class="card" style="width: 18rem;">
@@ -262,4 +278,81 @@ for (const pet of pets) {
   </ul>
 </div>`;
 }
-source.innerHTML = domString;
+petsDiv.innerHTML = domString;
+
+const filterBtns = (e) => {
+  domString = "";
+  pets.forEach((animal) => {
+    if (e.target === catBtn) {
+      if (animal.type === "cat") {
+        domString += `<div class="card" style="width: 18rem;">
+  <h5 class="card-title">${animal.name}</h5>
+  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
+  <div class="card-body">
+    
+    <p class="card-text">${animal.specialSkill}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${animal.color}</li>
+    <li class="list-group-item">${animal.type}</li>
+    <li class="list-group-item">${animal.id}</li>
+  </ul>
+</div>`;
+        petsDiv.innerHTML = domString;
+      }
+    } else if (e.target === dogBtn) {
+      if (animal.type === "dog") {
+        domString += `<div class="card" style="width: 18rem;">
+  <h5 class="card-title">${animal.name}</h5>
+  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
+  <div class="card-body">
+    
+    <p class="card-text">${animal.specialSkill}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${animal.color}</li>
+    <li class="list-group-item">${animal.type}</li>
+    <li class="list-group-item">${animal.id}</li>
+  </ul>
+</div>`;
+        petsDiv.innerHTML = domString;
+      }
+    } else if (e.target === dinoBtn) {
+      if (animal.type === "dino") {
+        domString += `<div class="card" style="width: 18rem;">
+  <h5 class="card-title">${animal.name}</h5>
+  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
+  <div class="card-body">
+    
+    <p class="card-text">${animal.specialSkill}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${animal.color}</li>
+    <li class="list-group-item">${animal.type}</li>
+    <li class="list-group-item">${animal.id}</li>
+  </ul>
+</div>`;
+        petsDiv.innerHTML = domString;
+      } else if (e.target === allBtn) {
+        domString += `<div class="card" style="width: 18rem;">
+  <h5 class="card-title">${animal.name}</h5>
+  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
+  <div class="card-body">
+    
+    <p class="card-text">${animal.specialSkill}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">${animal.color}</li>
+    <li class="list-group-item">${animal.type}</li>
+    <li class="list-group-item">${animal.id}</li>
+  </ul>
+</div>`;
+        petsDiv.innerHTML = domString;
+      }
+    }
+  });
+};
+catBtn.addEventListener("click", filterBtns);
+dogBtn.addEventListener("click", filterBtns);
+dinoBtn.addEventListener("click", filterBtns);
+allBtn.addEventListener("click", filterBtns);
