@@ -1,5 +1,9 @@
 body {
-  background-color: antiquewhite;
+  background-color: rgb(145, 252, 252);
+}
+img {
+  max-width: 286px;
+  max-height: 190.656px;
 }
 .card-container {
   display: flex;
@@ -7,7 +11,14 @@ body {
 }
 .card {
   margin: 5px;
+  background-color: (137, 43, 226, 0.475);
 }
 .buttoncontainer {
+  text-align: center;
+  margin: 20px;
+}
+
+#pets-div {
+  justify-content: center;
   text-align: center;
 }
