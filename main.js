@@ -13,7 +13,8 @@ const pets = [
     specialSkill:
       "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
     type: "dino",
-    imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg",
+    imageUrl:
+      "https://s3.amazonaws.com/mountainlake.org/wp-content/uploads/2022/03/23132850/dinosaur-5414593_1920-1155x770.jpg",
   },
   {
     name: "Whiskers",
@@ -61,7 +62,7 @@ const pets = [
     specialSkill: "Comfortable in the outdoors for up to eight hours.",
     type: "dino",
     imageUrl:
-      "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg",
+      "https://www.jsg.utexas.edu/vpl/files/Dilophosaurus-Puppet-Profile-mouth-closed-768x549.jpg",
   },
   {
     name: "Sassy",
@@ -85,7 +86,7 @@ const pets = [
     specialSkill: "Can be around food without staring creepily at it.",
     type: "dino",
     imageUrl:
-      "http://www.cantref.com/userfiles/events/walking%20dino.jpg?w=600",
+      "https://cdn.mos.cms.futurecdn.net/WARVeCHKWLEaoNY8grVkoR-970-80.jpg",
   },
   {
     name: "Buster",
@@ -126,7 +127,7 @@ const pets = [
     specialSkill: "Drives at a safe rate of speed in snow or rain.",
     type: "dino",
     imageUrl:
-      "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg",
+      "https://dynaimage.cdn.cnn.com/cnn/q_auto,w_634,c_fill,g_auto,h_357,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190828152336-07-western-us-dinosaur-road-trip.jpg",
   },
   {
     name: "Muffin",
@@ -134,7 +135,8 @@ const pets = [
     specialSkill:
       "Does not freak out if you haven’t seen his favorite movie (The Big Lebowski).",
     type: "cat",
-    imageUrl: "http://www.funnycatsite.com/pictures/Close_Up_Yawn.jpg",
+    imageUrl:
+      "https://cdn.images.express.co.uk/img/dynamic/1/590x/Are-you-available-to-pet-a-cat-file-image-1581513.webp?r=1647435124825",
   },
   {
     name: "Salem",
@@ -142,7 +144,7 @@ const pets = [
     specialSkill: "Proficient in air guitar",
     type: "dino",
     imageUrl:
-      "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg",
+      "https://cdn.mos.cms.futurecdn.net/cfeEKYjunpXkYvFZy2SMmm-970-80.jpg.webp",
   },
   {
     name: "Callie",
@@ -157,7 +159,8 @@ const pets = [
     color: "Black",
     specialSkill: "Uses litter box at appropriate hours.",
     type: "cat",
-    imageUrl: "http://www.funnycatsite.com/pictures/Lazy_White_Cat.jpg",
+    imageUrl:
+      "https://imagesvc.meredithcorp.io/v3/mm/image?url=https://static.onecms.io/wp-content/uploads/sites/34/2021/09/27/black-cat-kitchen-rug-getty-0921-2000.jpg",
   },
   {
     name: "Miss kitty",
@@ -165,7 +168,7 @@ const pets = [
     specialSkill: "Owns a Nintendo Power Glove.",
     type: "dino",
     imageUrl:
-      "https://img.buzzfeed.com/buzzfeed-static/static/2015-11/2/12/enhanced/webdr15/anigif_enhanced-29802-1446485228-10.gif?crop=250:165;0,0&downsize=715",
+      "https://imgix.bustle.com/inverse/d6/07/53/b5/86bb/43b5/9b48/7a59522acb30/dinosaur-chicken-hybrid.png?w=2000&h=1090&fit=crop&crop=faces&auto=format%2Ccompress&blend=000000&blendAlpha=45&blendMode=normal",
   },
   {
     name: "Snuggles",
@@ -173,7 +176,7 @@ const pets = [
     specialSkill: "Is comfortable with jokes about his receding hairline.",
     type: "cat",
     imageUrl:
-      "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg",
+      "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg?resize=550px:*&output-quality=50",
   },
   {
     name: "Buddy",
@@ -190,7 +193,7 @@ const pets = [
       "Participates in karaoke but does not force others to go out to karaoke.",
     type: "dog",
     imageUrl:
-      "http://www.dogbreedplus.com/dog_breeds/images/basset-hound-4.jpg",
+      "https://cdn-prd.content.metamorphosis.com/wp-content/uploads/sites/2/2021/12/shutterstock_787975687-1.jpg",
   },
   {
     name: "Salem",
@@ -198,7 +201,7 @@ const pets = [
     specialSkill: "Knows the words to 4 rap songs.",
     type: "cat",
     imageUrl:
-      "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg",
+      "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/UFN7EHE2Z4I6ZGMHTXHO4YVD6Y.jpg&w=916",
   },
   {
     name: "Bubba",
@@ -238,34 +241,42 @@ const pets = [
     specialSkill: "Doesn’t get weirded out by the word “moist.”",
     type: "dino",
     imageUrl:
-      "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119",
+      "https://c.ndtvimg.com/2019-09/28kahvq8_dinosaur-japan_625x300_06_September_19.jpg",
   },
 ];
+// *********  UTILITY FUNCTIONS  ********* //
+
+const renderToDom = (divId, textToRender) => {
+  const selectElement = document.querySelector(divId);
+  selectElement.innerHTML = textToRender;
+};
 pets.forEach((item, index) => {
   item.id = index + 1;
 });
 
-const source = document.querySelector("#source");
-source.innerHTML = `<div id="main">
-<div class="buttoncontainer">
-  <button id="cat-btn">Cats</button>
-  <button id="dog-btn">Dogs</button>
-  <button id="dinos-btn">Dinos</button>
-  <button id="all-btn">All</button>
+// *********  HTML COMPONENT FUNCTIONS  ********* //
+
+const source = () => {
+  const domString = `<div id="main">
+<div id="filterBtn" class="buttoncontainer">
+  <button id="cat" type="button" class="btn btn-secondary btn-lg">Cats</button>
+  <button id="dog" type="button" class="btn btn-secondary btn-lg">Dogs</button>
+  <button id="dino" type="button" class="btn btn-secondary btn-lg">Dinos</button>
+  <button id="allBtn" type="button" class="btn btn-secondary btn-lg">All</button>
 </div>
 <div id="pets-div" class="card-container"></div>
 </div>`;
+  renderToDom("#source", domString);
+};
 
-const catBtn = document.querySelector("#cat-btn");
-const dogBtn = document.querySelector("#dog-btn");
-const dinoBtn = document.querySelector("#dino-btn");
-const allBtn = document.querySelector("#all-btn");
-const petsDiv = document.querySelector("#pets-div");
-
-let domString = "";
-for (const pet of pets) {
-  domString += `<div class="card" style="width: 18rem;">
-  <h5 class="card-title">${pet.name}</h5>
+const cardsOnDom = (array) => {
+  let domString = "";
+  for (const pet of array) {
+    domString += `<div class="card" style="width: 18rem;">
+    <h5 class="card-header d-flex justify-content-between align-items-center">
+    ${pet.name}
+  <button id="delete" type="button" class="btn btn-sm btn-outline-danger">X</button>
+</h5>
   <img src="${pet.imageUrl}" class="card-img-top" alt="${pet.type}">
   <div class="card-body">
     
@@ -275,84 +286,28 @@ for (const pet of pets) {
     <li class="list-group-item">${pet.color}</li>
     <li class="list-group-item">${pet.type}</li>
     <li class="list-group-item">${pet.id}</li>
+    <li class="list-group-item"><button id="adopt" type="button" class="btn btn-block btn-primary">Adopt!</button></li>
   </ul>
 </div>`;
-}
-petsDiv.innerHTML = domString;
+  }
+  renderToDom("#pets-div", domString);
+};
 
-const filterBtns = (e) => {
-  domString = "";
-  pets.forEach((animal) => {
-    if (e.target === catBtn) {
-      if (animal.type === "cat") {
-        domString += `<div class="card" style="width: 18rem;">
-  <h5 class="card-title">${animal.name}</h5>
-  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
-  <div class="card-body">
-    
-    <p class="card-text">${animal.specialSkill}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${animal.color}</li>
-    <li class="list-group-item">${animal.type}</li>
-    <li class="list-group-item">${animal.id}</li>
-  </ul>
-</div>`;
-        petsDiv.innerHTML = domString;
-      }
-    } else if (e.target === dogBtn) {
-      if (animal.type === "dog") {
-        domString += `<div class="card" style="width: 18rem;">
-  <h5 class="card-title">${animal.name}</h5>
-  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
-  <div class="card-body">
-    
-    <p class="card-text">${animal.specialSkill}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${animal.color}</li>
-    <li class="list-group-item">${animal.type}</li>
-    <li class="list-group-item">${animal.id}</li>
-  </ul>
-</div>`;
-        petsDiv.innerHTML = domString;
-      }
-    } else if (e.target === dinoBtn) {
-      if (animal.type === "dino") {
-        domString += `<div class="card" style="width: 18rem;">
-  <h5 class="card-title">${animal.name}</h5>
-  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
-  <div class="card-body">
-    
-    <p class="card-text">${animal.specialSkill}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${animal.color}</li>
-    <li class="list-group-item">${animal.type}</li>
-    <li class="list-group-item">${animal.id}</li>
-  </ul>
-</div>`;
-        petsDiv.innerHTML = domString;
-      } else if (e.target === allBtn) {
-        domString += `<div class="card" style="width: 18rem;">
-  <h5 class="card-title">${animal.name}</h5>
-  <img src="${animal.imageUrl}" class="card-img-top" alt="${animal.type}">
-  <div class="card-body">
-    
-    <p class="card-text">${animal.specialSkill}</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">${animal.color}</li>
-    <li class="list-group-item">${animal.type}</li>
-    <li class="list-group-item">${animal.id}</li>
-  </ul>
-</div>`;
-        petsDiv.innerHTML = domString;
-      }
+// *********  EVENT LISTENERS  *********  //
+
+const eventListeners = () => {
+  document.querySelector("#filterBtn").addEventListener("click", (e) => {
+    if (e.target.id === "allBtn") {
+      cardsOnDom(pets);
+    } else if (e.target.id) {
+      const typeOfAnimal = pets.filter((animal) => animal.type === e.target.id);
+      cardsOnDom(typeOfAnimal);
     }
   });
 };
-catBtn.addEventListener("click", filterBtns);
-dogBtn.addEventListener("click", filterBtns);
-dinoBtn.addEventListener("click", filterBtns);
-allBtn.addEventListener("click", filterBtns);
+
+// *********  FUNCTION TO START APPLICATION  *********  //
+
+source();
+cardsOnDom(pets);
+eventListeners();
