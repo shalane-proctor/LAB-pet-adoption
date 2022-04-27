@@ -22,3 +22,10 @@ img {
   justify-content: center;
   text-align: center;
 }
+#createBtnContainer {
+  text-align: center;
+  margin: 20px;
+}
+#typeOfPet {
+  margin: 5px;
+}

@@ -250,12 +250,13 @@ const renderToDom = (divId, textToRender) => {
   const selectElement = document.querySelector(divId);
   selectElement.innerHTML = textToRender;
 };
-pets.forEach((item, index) => {
-  item.id = index + 1;
-});
 
+const addIndex = () => {
+  pets.forEach((item, index) => {
+    item.id = index + 1;
+  });
+};
 // *********  HTML COMPONENT FUNCTIONS  ********* //
-
 const source = () => {
   const domString = `<div id="main">
 <div id="filterBtn" class="buttoncontainer">
@@ -264,9 +265,71 @@ const source = () => {
   <button id="dino" type="button" class="btn btn-secondary btn-lg">Dinos</button>
   <button id="allBtn" type="button" class="btn btn-secondary btn-lg">All</button>
 </div>
+<div id="createBtnContainer"></div>
 <div id="pets-div" class="card-container"></div>
 </div>`;
   renderToDom("#source", domString);
+};
+
+const addPetModal = () => {
+  const modalBtn = `<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add-pet">
+  Put Your Pet Up for Adoption
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="add-pet" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Put A Pet Up for Adoption</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modal-body">
+      <form>
+          <div class="form-floating mb-3">
+            <input class="form-control form-control-lg" type="text" placeholder="Pet Name" id="name" required>
+            <label for="name">Pet Name</label>
+          </div>
+      
+          <div class="form-floating mb-3">
+            <input class="form-control form-control-lg" type="text" placeholder="Pet Color" id="color" required>
+            <label for="color">Color</label>
+          </div>
+
+          <div class="form-floating">
+            <textarea class="form-control" placeholder="Special Skills" id="specialSkill" style="height: 100px"></textarea>
+            <label for="specialSkill">Special Skills</label>
+          </div>
+      
+          <div class="form-floating mb-3">
+          <select class="form-select" form-control-lg" id="type" required>
+            <option selected>Select Type of Animal</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="dino">Dino</option>
+          </select>
+          <label for="type">Select Type of Animal</label>
+          </div>
+      
+          
+
+          <label for="basic-url" class="form-label"></label>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">Link Pet Pic URL</span>
+            <input type="text" class="form-control" id="imageUrl" for="imageUrl">
+          </div>
+
+          <button type="submit" class="btn btn-success">
+            Submit
+          </button>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>`;
+  renderToDom("#createBtnContainer", modalBtn);
 };
 
 const cardsOnDom = (array) => {
@@ -296,6 +359,10 @@ const cardsOnDom = (array) => {
 // *********  EVENT LISTENERS  *********  //
 
 const eventListeners = () => {
+  const formModal = new bootstrap.Modal(document.querySelector("#add-pet"));
+
+  document.querySelector;
+
   document.querySelector("#filterBtn").addEventListener("click", (e) => {
     if (e.target.id === "allBtn") {
       cardsOnDom(pets);
@@ -304,10 +371,34 @@ const eventListeners = () => {
       cardsOnDom(typeOfAnimal);
     }
   });
+
+  // BUTTONS ON CARDS
+
+  // FORM SUBMIT
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const newPetObj = {
+      name: document.querySelector("#name").value,
+      color: document.querySelector("#color").value,
+      specialSkill: document.querySelector("#specialSkill").value,
+      type: document.querySelector("#type").value,
+      imageUrl: document.querySelector("#imageUrl").value,
+    };
+    pets.push(newPetObj);
+    addIndex();
+    cardsOnDom(pets);
+    formModal.hide();
+    form.reset();
+  });
 };
 
 // *********  FUNCTION TO START APPLICATION  *********  //
-
-source();
-cardsOnDom(pets);
-eventListeners();
+const startApp = () => {
+  addIndex();
+  source();
+  addPetModal();
+  cardsOnDom(pets);
+  eventListeners();
+};
+startApp();
