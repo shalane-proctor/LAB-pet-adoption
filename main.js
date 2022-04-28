@@ -251,11 +251,13 @@ const renderToDom = (divId, textToRender) => {
   selectElement.innerHTML = textToRender;
 };
 
-const addIndex = () => {
+const addId = () => {
   pets.forEach((item, index) => {
+    // if (item.id === undefined)
     item.id = (index + 1).toString();
   });
 };
+const newId = () => {};
 // *********  HTML COMPONENT FUNCTIONS  ********* //
 const source = () => {
   const domString = `<div id="main">
@@ -349,7 +351,7 @@ const cardsOnDom = (array) => {
     <li class="list-group-item">${pet.color}</li>
     <li class="list-group-item">${pet.type}</li>
     <li id="petId" class="list-group-item">${pet.id}</li>
-    <li class="list-group-item"><button id="adopt" type="button" class="btn btn-block btn-primary">Adopt!</button></li>
+    <li class="list-group-item"><button id="adopt--${pet.id}" type="button" class="btn btn-block btn-primary">Adopt!</button></li>
   </ul>
 </div>`;
   }
@@ -397,7 +399,7 @@ const eventListeners = () => {
       imageUrl: document.querySelector("#imageUrl").value,
     };
     pets.push(newPetObj);
-    addIndex();
+    addId();
     cardsOnDom(pets);
     formModal.hide();
     form.reset();
@@ -406,7 +408,7 @@ const eventListeners = () => {
 
 // *********  FUNCTION TO START APPLICATION  *********  //
 const startApp = () => {
-  addIndex();
+  addId();
   source();
   addPetModal();
   cardsOnDom(pets);
