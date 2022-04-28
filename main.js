@@ -253,7 +253,7 @@ const renderToDom = (divId, textToRender) => {
 
 const addIndex = () => {
   pets.forEach((item, index) => {
-    item.id = index + 1;
+    item.id = (index + 1).toString();
   });
 };
 // *********  HTML COMPONENT FUNCTIONS  ********* //
@@ -338,7 +338,7 @@ const cardsOnDom = (array) => {
     domString += `<div class="card" style="width: 18rem;">
     <h5 class="card-header d-flex justify-content-between align-items-center">
     ${pet.name}
-  <button id="delete" type="button" class="btn btn-sm btn-outline-danger">X</button>
+  <button id="delete--${pet.id}" type="button" class="btn btn-sm btn-outline-danger">X</button>
 </h5>
   <img src="${pet.imageUrl}" class="card-img-top" alt="${pet.type}">
   <div class="card-body">
@@ -348,7 +348,7 @@ const cardsOnDom = (array) => {
   <ul class="list-group list-group-flush">
     <li class="list-group-item">${pet.color}</li>
     <li class="list-group-item">${pet.type}</li>
-    <li class="list-group-item">${pet.id}</li>
+    <li id="petId" class="list-group-item">${pet.id}</li>
     <li class="list-group-item"><button id="adopt" type="button" class="btn btn-block btn-primary">Adopt!</button></li>
   </ul>
 </div>`;
@@ -373,6 +373,17 @@ const eventListeners = () => {
   });
 
   // BUTTONS ON CARDS
+
+  document.querySelector("#pets-div").addEventListener("click", (e) => {
+    if (e.target.id) {
+      const [method, petId] = e.target.id.split("--");
+      const index = pets.findIndex((idOfPet) => idOfPet.id === petId);
+      if (e.target.id.includes("delete")) {
+        pets.splice(index, 1);
+        cardsOnDom(pets);
+      }
+    }
+  });
 
   // FORM SUBMIT
   const form = document.querySelector("form");
